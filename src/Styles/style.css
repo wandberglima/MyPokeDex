@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'DynaPuff', cursive;
 }
 
 body{
@@ -26,13 +29,13 @@ body{
 .container-nome{
     background-color: #9EDEF9;
     box-shadow: 0 5px 5px rgb(0 0 0 / 50%);
-    flex-direction: row;
     display: flex;
-    align-items: center;
-    justify-content: center;
     box-sizing: border-box;
+    align-items: center;
 }
-
+.nume {
+    width: 65%;
+}
 .card-img-top { 
     width: 24%; 
 }
@@ -41,18 +44,24 @@ body{
     background-color:#9EDEF9;
     width:100%;
     border-radius: 3%;
+    padding: 20px;
+    box-shadow: 0 5px 5px rgb(0 0 0 / 50%);
 }
 .poke-nome {
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+}
+
+h2 .poke-nome {
+    margin-right: 5px;
 }
 
 .container-nome:hover {
-    padding-left: 35px;
+    margin-left: 35px;
 }
 
 .right-content{
@@ -68,21 +77,21 @@ body{
 }
 
 .right-content img{
-    margin: 1.5rem;
-    height: 160px;
+    margin: 0.5rem;
+    height: 180px;
+
 }
 .right-content h1{
     text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+
 }
+
 .abilities{
-    width: 70%;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
 }
 .abilities .group{
     background-color: #b74555;
@@ -92,9 +101,6 @@ body{
     border-radius: 8px;
     margin-left: 1rem;
 }
-.base-stat{
-    margin-top: 2rem;
-}
 
 .easterEgg {
     display: none;
@@ -103,6 +109,7 @@ body{
 .btn-group{
     display: flex;
 }
+
 .btn-group button{
     outline: none;
     border: none;
@@ -115,7 +122,41 @@ body{
     background-color: #b74555;
     border-radius: 8px;
 }
+
+.base-stat{
+    margin-top: 2rem;
+}
+
 .status {
     display: flex;
     align-items: center;
+    margin-bottom: 5px;
 }
+
+.progress-bar {
+    width: 65%;
+    background-color: aliceblue;
+    border: none;
+
+}
+
+.espaco-status {
+    display: flex;
+    width: 35%;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.titulo {
+
+}
+
+@keyframes progress-animation{
+    from {
+       width: 0%;   
+    }
+
+    to {
+    }
+
+    }
