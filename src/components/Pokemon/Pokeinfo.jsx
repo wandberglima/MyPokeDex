@@ -1,26 +1,40 @@
 import React from "react";
 
 const Pokeinfo = ({ data }) => {
+  const handleClick = () => {
+    // Adicionando o easterEgg do pikachu se remover a condição && igualando ao id do pikachu é possivel alterar o fundo para a imagem de qualquer pokemon.
+    if (contador() === 3 && data.id === 25) {
+      document
+        .querySelector("[name=EasterEgg]")
+        .addEventListener("click", function () {
+          this.style.backgroundImage = `url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg') `;
+        });
+    }
+  };
+
+  var count = 0;
+  const contador = () => {
+    count++;
+
+    console.log(count);
+    if (count === 3) {
+      return count;
+    }
+  };
+
   return (
     <>
       {!data ? (
         ""
       ) : (
         <>
-          {/* Add EasterEgg de qualquer pokemon tag ficticia */}
-          <i className="easterEgg">
-            if ({data.id} === {data.name}){" "}
-            {document
-              .querySelector("[name=EasterEgg]")
-              .addEventListener("click", function () {
-                this.style.backgroundImage = `url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg') `;
-              })}
-          </i>
           <div className="card-img-top fundo">
             {/* Card de informações do Pokemon */}
-
             <h1>{data.name}</h1>
+
             <img
+              id="poke-img"
+              onClick={handleClick}
               src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png`}
               alt=""
             />
@@ -30,7 +44,7 @@ const Pokeinfo = ({ data }) => {
                 return (
                   <>
                     <div className="group">
-                      <h2>{poke.type.name}</h2>
+                      <h2 className="titulo">{poke.type.name}</h2>
                     </div>
                   </>
                 );
@@ -38,25 +52,23 @@ const Pokeinfo = ({ data }) => {
             </div>
             <div className="base-stat">
               {data.stats.map((poke) => {
-                if ({ poke } === {poke}) {
-                  document
-                    .querySelectorAll("[name=barra]")
-                    .addEventListener("click", function () {
-                      this.style.backgroundColor = `blue`;
-                      // this.style.width = `{poke.base_stat}`;
-                      this.sttyle.border = `1px solid black`;
-                      this.props.ariaValuemax = `{poke.base_stat}`;
-                    });
-                }
+                // barra de status
+                var barraStatusPokemon = {
+                  color: "white",
+                  backgroundColor: "blue",
+                  width: poke.base_stat + "%",
+                  animation: "progress-animation 5s infinite",
+                };
 
                 return (
                   <>
+                    {/* Status bar com animação continua */}
                     <div className="status">
-                      <div> {poke.stat.name}: </div>
-                      <div className="progress">
-                        <div name="barra" className="progress-bar">
+                      <div className="espaco-status">{poke.stat.name}:</div>
+                      <div className="progress-bar" id="progress">
+                        <span className="barra" style={barraStatusPokemon}>
                           {poke.base_stat}
-                        </div>
+                        </span>
                       </div>
                     </div>
                   </>
@@ -69,4 +81,5 @@ const Pokeinfo = ({ data }) => {
     </>
   );
 };
+
 export default Pokeinfo;
