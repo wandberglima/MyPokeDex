@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #ffffff;
+    background-image: url();
+}
+
+.left-content, .right-content {
+    flex-basis: 50%;
+}
+
+.left-content{
+    width: 50%;
+    display: grid;
+    grid-gap: 5px;
+}
+.card{
+    width: 60%;
+    height: 60px;
+}
+
+.container-nome{
+    background-color: #9EDEF9;
+    box-shadow: 0 5px 5px rgb(0 0 0 / 50%);
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.card-img-top { 
+    width: 24%; 
+}
+
+.fundo {
+    background-color:#9EDEF9;
+    width:100%;
+    border-radius: 3%;
+}
+.poke-nome {
+    font-weight: bolder;
+    font-size: 25px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.container-nome:hover {
+    padding-left: 35px;
+}
+
+.right-content{
+    width: 50%;
+    text-align: center;
+    color: black;
+    position: fixed;
+    top: 5%;
+    right: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-content img{
+    margin: 1.5rem;
+    height: 160px;
+}
+.right-content h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.abilities{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.abilities .group{
+    background-color: #b74555;
+    color: white;
+    padding: 0.5rem;
+    font-size: 12px;
+    border-radius: 8px;
+    margin-left: 1rem;
+}
+.base-stat{
+    margin-top: 2rem;
+}
+
+.easterEgg {
+    display: none;
+}
+
+.btn-group{
+    display: flex;
+}
+.btn-group button{
+    outline: none;
+    border: none;
+    width: 150px;
+    padding: 0.3rem 0;
+    margin: 1rem;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    background-color: #b74555;
+    border-radius: 8px;
+}
