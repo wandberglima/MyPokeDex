@@ -4,20 +4,30 @@ const Card = ({ pokemon, loading, infoPokemon }) => {
     <>
       {
         // Carregando a lista de pokemons e atribuindo a função de clique para abrir o card detalhado
-
         loading ? (
           <h1>Loading...</h1>
         ) : (
           pokemon.map((pokemon) => {
             return (
               <>
-                <div className="card container-nome" key={pokemon.id} onClick={() => infoPokemon(pokemon)}>
-                    <img src={pokemon.sprites.front_default} className="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h2 className="poke-nome">{pokemon.id}
-                        <span className="poke-nome"> {pokemon.name} </span>
-                        </h2>
+                <div
+                  className="card container-nome"
+                  key={pokemon.id}
+                  onClick={() => infoPokemon(pokemon)}
+                >
+                  <h2 className="poke-nome">
+                    {pokemon.id}
+                    <div>
+                      <img
+                        src={pokemon.sprites.front_default}
+                        className="nume"
+                        alt="..."
+                      />
                     </div>
+                    <div class="card-body">
+                      <span className="poke-nome"> {pokemon.name} </span>
+                    </div>
+                  </h2>
                 </div>
               </>
             );
@@ -27,4 +37,5 @@ const Card = ({ pokemon, loading, infoPokemon }) => {
     </>
   );
 };
+
 export default Card;
