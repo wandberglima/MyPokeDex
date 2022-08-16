@@ -18,8 +18,8 @@ Antes de iniciar, se assegure que possui os requisitos abaixo:
 - <Requisito 2> javascript instalado em sua maquina
 - <Requisito 3> um browser atualizado para não ocorrer bugs
 - <Requisito 4> conhecimento basico de Git 
-- <Requisito 5> ter instalado o Node.js
-- <Requisito 6> ter instalado o React
+- <Requisito 5> ter instalado o Node.js  ver. 16.15.1
+- <Requisito 6> ter instalado o React ver. 17.0.2
 
 ## Instalação/Execução
 
