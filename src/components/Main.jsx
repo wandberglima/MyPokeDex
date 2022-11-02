@@ -12,9 +12,9 @@ const Main = () => {
   const [prevUrl, setPrevUrl] = useState();
   const [pokeDex, setPokeDex] = useState();
 
-  async function pokeFun() {
+  async function vaiVolta() {
     setLoading(true);
-    // resposta do get
+    // resposta do get para os botões previous e next
     const res = await axios.get(url);
     setNextUrl(res.data.next);
     setPrevUrl(res.data.previous);
@@ -36,7 +36,7 @@ const Main = () => {
   };
 
   useEffect(() => {
-    pokeFun();
+    vaiVolta();
   }, [url]);
 
   return (
