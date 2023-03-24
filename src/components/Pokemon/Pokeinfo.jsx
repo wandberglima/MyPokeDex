@@ -2,8 +2,8 @@ import React from "react";
 const Pokeinfo = ({ data }) => {
   const handleClick = () => {
     // Adicionando o easterEgg do pikachu se remover a condição && igualando ao id do pikachu é possivel alterar o fundo para a imagem de qualquer pokemon.
-    if (contador() === 3 && data.id === 25) {
-      // 
+    if (contador() === 3 ) {
+      // && data.id === 25
       document
         .querySelector("[name=EasterEgg]")
         .addEventListener("click", function () {
@@ -59,7 +59,7 @@ const Pokeinfo = ({ data }) => {
                   width: poke.base_stat + "%",
                   animation: "progress-animation 5s normal",
                 };
-
+                
                 return (
                   <>
                     {/* Status bar com animação continua */}
